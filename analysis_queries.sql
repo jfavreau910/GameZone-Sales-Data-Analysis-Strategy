@@ -1,7 +1,7 @@
 /*
 =============================================================================
 Gamezone Strategic Data Analysis - Q1 2026
-Author: Senior Data Analyst
+Author: J. Favreau
 Platform: SQL (Standard / AWS Redshift / PostgreSQL Compatible)
 Description: 
     This script handles data integrity validation, privacy masking for 
