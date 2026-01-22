@@ -1,6 +1,6 @@
 """
 Gamezone Strategic Analysis - Q1 2026
-Author: Senior Data Analyst
+Author: J. Favreau
 Description: 
     This script processes sales data to identify VIP customers ("Whales"), 
     calculates purchase probability for subscription targeting, 
