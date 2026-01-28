@@ -5,7 +5,7 @@ This repository contains a professional-grade technical suite designed for the G
 
 ### Key Strategic Pillars
 * **The Whale Strategy**: Identification and white-glove targeting of the Top 10 customers (LTV > $2,000). While US volume is high, our highest margin growth is currently situated in the EU (DE, GB, FR).
-* **Operational Alpha**: Reducing warehouse overhead by 20% through "Predictive Bundling"—pre-packaging high-probability item pairs (e.g., PS5 + 4K Monitors) before peak demand cycles.
+* **Predictive Bundling**: Reducing warehouse overhead by 20% through "Predictive Bundling"—pre-packaging high-probability item pairs (e.g., PS5 + 4K Monitors) before peak demand cycles.
 * **Accessible Market Expansion**: By implementing WCAG 2.1 (ADA) compliance across our data visuals and store-fronts, we are positioning GameZone to capture the 25% of the market often ignored by competitors.
 * **Ethical Data Framework**: Utilizing Zero-Party data for marketing and cloud-native field-level encryption (AWS/Azure) to ensure 100% GDPR and CCPA compliance.
 
@@ -18,7 +18,7 @@ This project utilizes a multi-disciplinary approach to ensure data integrity and
 
 * **Python (ETL & Modeling)**: Handles complex data scrubbing, "Time Travel" error correction (Ship Date < Purchase Date), and probability-of-purchase scoring for subscription targeting.
 * **SQL (Cloud-Ready Analysis)**: Features Common Table Expressions (CTEs) optimized for AWS Redshift/Azure Synapse, including automated PII masking views for executive security.
-* **Tableau (Strategic Visualization)**: High-contrast, interactive dashboards built for rapid executive decision-making.
+* **Tableau (Strategic Visualization)**: Utilizes high-contrast, interactive dashboards built for rapid executive decision-making.
 * **ADA Compliance**: Visualizations utilize the Okabe-Ito colorblind-friendly palette and direct-labeling standards to ensure accessibility for visually impaired board members.
 
 
