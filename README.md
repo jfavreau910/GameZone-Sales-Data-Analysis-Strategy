@@ -16,9 +16,9 @@ This repository contains a full stack professional-grade technical suite designe
 ## Technical Stack & Methodology
 This project utilizes a multi-disciplinary approach to ensure data integrity and actionable insights:
 
-* **Python (ETL & Modeling)**: Handles complex data scrubbing, "Time Travel" error correction (Ship Date < Purchase Date), and probability-of-purchase scoring for subscription targeting.
-* **SQL (Cloud-Ready Analysis)**: Features Common Table Expressions (CTEs) optimized for AWS Redshift/Azure Synapse, including automated PII masking views for executive security.
-* **Gemini Nano Banana 2 (Strategic Visualization)**: Utilizes high-contrast,  built for rapid executive decision-making.
+* **Python & Gemini (ETL & Modeling)**: Handles complex data scrubbing, "Time Travel" error correction (Ship Date < Purchase Date), and probability-of-purchase scoring for subscription targeting.
+* **SQL and Gemini (Cloud-Ready Analysis)**: Features Common Table Expressions (CTEs) optimized for AWS Redshift/Azure Synapse, including automated PII masking views for executive security.
+* **Gemini Nano Banana 2 (Strategic Visualization)**: Utilizes high-contrast visualizations and a pipeline transformation,  built for quick understanding and rapid executive decision-making.
 * **ADA Compliance**: Visualizations utilize the Okabe-Ito colorblind-friendly palette and direct-labeling standards to ensure accessibility for visually impaired viewers.
 
 
