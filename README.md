@@ -2,6 +2,7 @@
 
 ## Executive Summary
 This repository contains a full stack professional-grade technical suite designed for the GameZone Board of Directors. The project transitions our current data operations from retrospective reporting to a forward-looking roadmap centered on "Whale" retention, warehouse efficiency, and accessible market expansion.
+Included are ADA, colorblind-friendly, high-contrast visualizations, a pipeline transformation, and a slide-deck. These are built for quick understanding and rapid executive decision-making.
 
 ## Key Findings
 1.  **Retention Gap**: 82% of our customers are one-time buyers. The "GameZone Pro" initiative targets the 18% repeat-buyer segment which currently drives 45% of our profit margins.
@@ -29,7 +30,7 @@ This project utilizes a multi-disciplinary approach to ensure data integrity and
 * `analysis_queries.sql`: The cloud-optimized SQL script for revenue aggregation and privacy-first views.
 * `/visuals/`: Contains high-resolution, ADA-compliant PNG charts for presentations.
 * `Gamezone_Board_Presentation.pptx`: The final slidedeck generated for the Board of Directors.
-* `gz-orders-cleaned.csv`: The source dataset 
+* `gz-orders-cleaned.csv`, `gz-region-cleaned.csv`: The source datasets, containing over 20k rows of excel data.
 ---
 
 ## Getting Started
