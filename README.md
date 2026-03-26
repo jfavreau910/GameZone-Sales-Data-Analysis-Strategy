@@ -6,7 +6,7 @@ This repository contains a full stack technical suite designed for the GameZone 
 Included are ADA, colorblind-friendly, high-contrast visualizations, a pipeline transformation, and a slide-deck. These are built for quick understanding and rapid executive decision-making.
 
 ## Key Findings
-1.  **Retention Gap**: 82% of our customers are one-time buyers. The "GameZone Pro" initiative targets the 18% repeat-buyer segment which currently drives 45% of our profit margins.
+1.  **Retention Gap**: 82% of our new customers in Year 1 are one-time buyers. The "GameZone Pro" initiative targets the 18% repeat-buyer segment which currently drives 45% of our profit margins.
 2.  **Seasonality**: Revenue analysis identifies a significant "Summer Valley." Predictive bundling of accessories is recommended to smooth cash flow during non-holiday quarters.
 3.  **Privacy Priority**: All board-facing data uses masked User IDs. Data is protected via encryption on our cloud-hosted database.
    
