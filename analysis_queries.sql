@@ -112,7 +112,7 @@ ORDER BY avg_order_value DESC;
 -- INSIGHT D: Monthly Revenue Trends (Seasonality)
 -- Aggregates sales by month to identify the "Summer Slump" vs "Holiday Spike".
 SELECT 
-    DATE_TRUNC('month', PURCHASE_TS) AS sales_month,
+    DATE_TRUNC(MONTH, PURCHASE_TS) AS sales_month,
     SUM(USD_PRICE) AS total_revenue
 FROM orders
 GROUP BY 1
