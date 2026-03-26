@@ -7,8 +7,16 @@ Description:
     This script handles data integrity validation, privacy masking for 
     executive reporting, and core revenue analysis.
 =============================================================================
+/*
+   DATA DICTIONARY:
+   - USER_ID: UUID, unique customer identifier
+   - PURCHASE_TS: TIMESTAMP (UTC), order creation time
+   - SHIP_TS: TIMESTAMP (UTC), shipment initiation time
+   - USD_PRICE: DECIMAL(10,2), order amount in USD
+   - COUNTRY_CODE: VARCHAR(2), ISO 3166-1 alpha-2 code
 */
 
+*/
 -- ==========================================================================
 -- SECTION 0: INDEX SETUP
 -- ==========================================================================
@@ -44,21 +52,33 @@ ORDER BY shipping_latency_days ASC;
    Purpose: Masks Personally Identifiable Information (PII) for board presentations.
    Uses concatenation to hide the full USER_ID while keeping it unique for counting.
 */
+
+sql
+
+-- Add security context 
 CREATE OR REPLACE VIEW board_ready_sales AS
 SELECT 
-    -- Masking USER_ID for Privacy (GDPR/CCPA Compliance)
-    MD5(USER_ID) as masked_user_id,
+    CONCAT('GZ-', MD5(USER_ID)) as masked_user_id,
     COUNTRY_CODE,
     SUM(USD_PRICE) as total_spend,
     COUNT(ORDER_ID) as order_volume,
-    -- Segmentation for Strategy
     CASE 
         WHEN SUM(USD_PRICE) > 2000 THEN 'Whale (VIP)'
         WHEN SUM(USD_PRICE) BETWEEN 500 AND 2000 THEN 'High Value'
         ELSE 'Standard'
     END as customer_tier
 FROM orders
+WHERE COUNTRY_CODE IN (SELECT allowed_countries FROM user_permissions WHERE user_id = CURRENT_USER)
 GROUP BY USER_ID, COUNTRY_CODE;
+
+-- Log access to sensitive views
+CREATE TABLE audit_log (
+    query_id INT,
+    view_name VARCHAR,
+    accessed_by VARCHAR,
+    accessed_at TIMESTAMP,
+    row_count INT
+);
 
 -- ==========================================================================
 -- SECTION 3: STRATEGIC REVENUE INSIGHTS
