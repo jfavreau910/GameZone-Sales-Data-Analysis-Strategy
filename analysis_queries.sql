@@ -10,6 +10,15 @@ Description:
 */
 
 -- ==========================================================================
+-- SECTION 0: INDEX SETUP
+-- ==========================================================================
+-- Recommended indexes:
+CREATE INDEX idx_orders_user_id ON orders(USER_ID);
+CREATE INDEX idx_orders_purchase_ts ON orders(PURCHASE_TS);
+CREATE INDEX idx_orders_country ON orders(COUNTRY_CODE);
+CREATE INDEX idx_orders_ship_ts ON orders(SHIP_TS);
+
+-- ==========================================================================
 -- SECTION 1: DATA INTEGRITY & QUALITY CHECKS
 -- ==========================================================================
 
@@ -38,7 +47,7 @@ ORDER BY shipping_latency_days ASC;
 CREATE OR REPLACE VIEW board_ready_sales AS
 SELECT 
     -- Masking USER_ID for Privacy (GDPR/CCPA Compliance)
-    CONCAT('GZ-', LEFT(USER_ID, 4), '****') as masked_user_id,
+    MD5(USER_ID) as masked_user_id,
     COUNTRY_CODE,
     SUM(USD_PRICE) as total_spend,
     COUNT(ORDER_ID) as order_volume,
@@ -57,12 +66,13 @@ GROUP BY USER_ID, COUNTRY_CODE;
 
 -- INSIGHT A: The "Whales" (Top 10 Customers by Revenue)
 -- Focus: These customers drive the "Predictive Bundling" strategy.
+
 SELECT 
     USER_ID,
     COUNTRY_CODE,
     SUM(USD_PRICE) AS lifetime_revenue,
     COUNT(ORDER_ID) AS frequency,
-    MAX(PRODUCT_NAME) AS last_item_purchased
+    FIRST_VALUE(PRODUCT_NAME) OVER (PARTITION BY USER_ID ORDER BY PURCHASE_TS DESC) AS last_item_purchased
 FROM orders
 GROUP BY USER_ID, COUNTRY_CODE
 ORDER BY lifetime_revenue DESC
