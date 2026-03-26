@@ -43,6 +43,12 @@ FROM orders
 WHERE SHIP_TS < PURCHASE_TS
 ORDER BY shipping_latency_days ASC;
 
+/* What if PURCHASE_TS or SHIP_TS is NULL?
+*/
+WHERE SHIP_TS < PURCHASE_TS 
+  AND SHIP_TS IS NOT NULL 
+  AND PURCHASE_TS IS NOT NULL
+
 -- ==========================================================================
 -- SECTION 2: PRIVACY & SECURITY (BOARD READY VIEWS)
 -- ==========================================================================
