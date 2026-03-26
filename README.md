@@ -1,13 +1,14 @@
 # GameZone Strategic Full Stack Analysis: Turning Latency into Currency
 
+##For Stakeholders
 ## Executive Summary
-This repository contains a full stack technical suite designed for the GameZone Board of Directors. The project transitions our current data operations from retrospective reporting to a forward-looking roadmap centered on "Whale" retention, warehouse efficiency, and accessible market expansion.
+This repository contains a full stack technical suite designed for the GameZone Board of Directors.  This analysis identifies three growth opportunities: retaining high-value customers, optimizing warehouse costs, and expanding into underserved accessible markets.
 Included are ADA, colorblind-friendly, high-contrast visualizations, a pipeline transformation, and a slide-deck. These are built for quick understanding and rapid executive decision-making.
 
 ## Key Findings
 1.  **Retention Gap**: 82% of our customers are one-time buyers. The "GameZone Pro" initiative targets the 18% repeat-buyer segment which currently drives 45% of our profit margins.
 2.  **Seasonality**: Revenue analysis identifies a significant "Summer Valley." Predictive bundling of accessories is recommended to smooth cash flow during non-holiday quarters.
-3.  **Privacy Priority**: All board-facing data uses masked User IDs. Data is protected via field-level encryption on our cloud-hosted (AWS/Azure) database.
+3.  **Privacy Priority**: All board-facing data uses masked User IDs. Data is protected via encryption on our cloud-hosted database.
    
 ## Key Strategic Pillars
 * **The Whale Strategy**: Identification and white-glove targeting of the Top 10 customers with a lifetime value (LTV) > $2,000. While US volume is high, our highest margin growth is currently situated in the EU (DE, GB, FR).
@@ -16,10 +17,11 @@ Included are ADA, colorblind-friendly, high-contrast visualizations, a pipeline 
 * **Ethical Data Framework**: Utilizing Zero-Party data for marketing, and cloud-native field-level encryption (AWS/Azure) to ensure 100% GDPR and CCPA compliance.
 ---
 
+##For Developers
 ## Technical Stack & Methodology
-This project utilizes a multi-disciplinary approach to ensure data integrity and actionable insights:
+We're utilizing a multi-disciplinary approach to ensure data integrity and actionable insights:
 
-* **Python & Gemini (ETL & Modeling)**: Handles complex data scrubbing, identifying and correcting records where Ship Date < Purchase Date by clipping negative values to 0. , and probability-of-purchase scoring for subscription targeting.
+* **Python & Gemini (ETL & Modeling)**: Handles complex data scrubbing, identifying and correcting records where Ship Date < Purchase Date by clipping negative values to 0, and probability-of-purchase scoring for subscription targeting.
 * **SQL and Gemini (Cloud-Ready Analysis)**: Features Common Table Expressions (CTEs) optimized for AWS Redshift/Azure Synapse, including automated PII masking views for executive security.
 * **Gemini (Strategic Visualization)**: Utilizes high-contrast visualizations and a pipeline transformation,  built for quick understanding and rapid executive decision-making.
 * **ADA Compliance**: Visualizations utilize the Okabe-Ito colorblind-friendly palette and direct-labeling standards to ensure accessibility for visually impaired viewers.
