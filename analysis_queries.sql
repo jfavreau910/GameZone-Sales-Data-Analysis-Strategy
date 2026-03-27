@@ -15,8 +15,6 @@ Description:
    - USD_PRICE: DECIMAL(10,2), order amount in USD
    - COUNTRY_CODE: VARCHAR(2), ISO 3166-1 alpha-2 code
 */
-
-*/
 -- ==========================================================================
 -- SECTION 0: INDEX SETUP
 -- ==========================================================================
