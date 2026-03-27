@@ -38,7 +38,9 @@ SELECT
     SHIP_TS,
     (SHIP_TS - PURCHASE_TS) as shipping_latency_days
 FROM orders
-WHERE SHIP_TS < PURCHASE_TS
+WHERE SHIP_TS < PURCHASE_TS 
+  AND SHIP_TS IS NOT NULL 
+  AND PURCHASE_TS IS NOT NULL
 ORDER BY shipping_latency_days ASC;
 
 /* What if PURCHASE_TS or SHIP_TS is NULL?
@@ -62,7 +64,7 @@ sql
 -- Add security context 
 CREATE OR REPLACE VIEW board_ready_sales AS
 SELECT 
-    CONCAT('GZ-', MD5(USER_ID)) as masked_user_id,
+    'GZ-' || ROW_NUMBER() OVER (ORDER BY USER_ID) as masked_user_id
     COUNTRY_CODE,
     SUM(USD_PRICE) as total_spend,
     COUNT(ORDER_ID) as order_volume,
