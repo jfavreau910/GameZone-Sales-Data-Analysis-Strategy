@@ -39,7 +39,7 @@ We're utilizing a multi-disciplinary approach to ensure data integrity and actio
 ## Getting Started
 1.  **Requirements**: Install Python 3.10+ and libraries (`pandas`, `matplotlib`, `seaborn`).
 2.  **Data Processing**: Run `analysis_script.py` to generate the clean outputs and accessibility-optimized visuals.
-3.  **Database Migration**: Execute `analysis_queries.sql` in your SQL environment to build the `board_ready_sales` view.
+3.  **Database Migration**: Execute `analysis_queries.sql` in SQL to build the `board_ready_sales` view.
 
 **Note on ADA Compliance**: This project follows Americans with Disabilities Act standards for data presentation. All charts are rendered with high contrast and pattern-based markers to ensure they are fully interpretable by colorblind and visually impaired viewers.
 
@@ -48,8 +48,8 @@ We're utilizing a multi-disciplinary approach to ensure data integrity and actio
 
 ## Ownership & Contact
 * **Project Owner: Julie Favreau, Data Analyst
-* **Executive Sponsor: Anne Hryunak, CFO
-* **Implementation Lead: Dave Bautista, Senior Data Engineer
+* **Executive Sponsor: Anne Hryunak, VP of Marketing
+* **Implementation Lead: Dave Palpatine, Senior Data Engineer
 * **Last Updated: 2026/03/31
 * **Contact: jfavreau@gamezone.com
 ---
