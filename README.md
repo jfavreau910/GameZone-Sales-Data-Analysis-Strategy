@@ -44,13 +44,13 @@ We're utilizing a multi-disciplinary approach to ensure data integrity and actio
 **Note on ADA Compliance**: This project follows Americans with Disabilities Act standards for data presentation. All charts are rendered with high contrast and pattern-based markers to ensure they are fully interpretable by colorblind and visually impaired viewers.
 
 ## Assumptions / Limitations
-** The dataset used for analysis is representative of the last 2 years. If the BOD approves the proposal, we will gather and analyze more granular data.
+* The dataset used for analysis is representative of the last 2 years. If the BOD approves the proposal, we will gather and analyze more granular data.
 
 ## Ownership & Contact
-**Project Owner: Julie Favreau, Data Analyst
-**Executive Sponsor: Anne Hryunak, VP of Marketing
-**Implementation Lead: Dave Palpatine, Senior Data Engineer
-**Last Updated: 2026/03/31
-**Contact: jfavreau@gamezone.com
+* Project Owner: Julie Favreau, Data Analyst
+* Executive Sponsor: Anne Hryunak, VP of Marketing
+* Implementation Lead: Dave Palpatine, Senior Data Engineer
+* Last Updated: 2026/03/31
+* Contact: jfavreau@gamezone.com
 ---
 *Developed by J. Favreau*
