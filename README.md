@@ -53,4 +53,4 @@ We're utilizing a multi-disciplinary approach to ensure data integrity and actio
 * **Last Updated: 2026/03/31
 * **Contact: jfavreau@gamezone.com
 ---
-*Developed by J. Favreau, Data Analytics Team*
+*Developed by J. Favreau*
